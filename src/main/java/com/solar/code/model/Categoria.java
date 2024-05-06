@@ -3,7 +3,7 @@ package com.solar.code.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Cliente")
+@Table(name="Categoria")
 public class Categoria {
   // ATRIBUTOS
   @Id  @Column  @GeneratedValue(strategy = GenerationType.IDENTITY)
