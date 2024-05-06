@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 public class ClienteController {
     @Autowired
     private ClienteServicessss clienteService;
- 
+
     @GetMapping("/clientes") //peticion get , mapear  la url a este endpoint
     public List<Cliente> index(){
         return clienteService.findAll();
@@ -102,7 +102,6 @@ public class ClienteController {
             clienteActual.setApellido(cliente.getApellido());
             clienteActual.setNombre(cliente.getNombre());
             clienteActual.setEmail(cliente.getEmail());
-            clienteActual.setCreateAt(cliente.getCreateAt());
 
             clienteUpdated = clienteService.save(clienteActual);
 
