@@ -48,7 +48,7 @@ public class ClienteController {
         return new ResponseEntity<Cliente>(cliente, HttpStatus.OK);
     } //show es mostrar
 
-    @PostMapping("/clientes")
+    @PostMapping("/cliente")
     public ResponseEntity<?> create(@Valid @RequestBody Cliente cliente, BindingResult result){ // osea nos manda de tipo json el cliente y luego requestbody es un puente que lo conbierte y inserta a la clase cliente
         //line 51 @Valid a pezar que tiene validaciones en Entity no se validara , pero con esta anotacion si
         Cliente clienteNew = null;
@@ -115,7 +115,7 @@ public class ClienteController {
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/clientes/{id}")
+    @DeleteMapping("/cliente/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
         Map<String, Object> response = new HashMap<>();
         try {
